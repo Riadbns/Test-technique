@@ -1,0 +1,28 @@
+<div class="blog-container">
+  {{#each blogs}}
+    <div class="blog">
+      <div class="dropdown">
+        <button class="dropdown-btn">Options</button>
+        <ul class="dropdown-content">
+
+          <li><button
+              class="delete-button"
+              id="supprimer"
+              data-id="{{this.id_blogue}}"
+            >Delete</button></li>
+          <li><button
+              class="edit-button"
+              id="modifier"
+              data-id="{{this.id_blogue}}"
+            >Edit</button></li>
+
+        </ul>
+      </div>
+      <h2 class="blog-title">{{this.nom}}</h2>
+      <p class="blog-date">{{afficheDAte this.date}}</p>
+      <p class="blog-content">
+        {{this.description}}
+      </p>
+    </div>
+  {{/each}}
+</div>

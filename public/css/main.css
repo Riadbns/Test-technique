@@ -1,0 +1,375 @@
+/* body */
+body {
+  height: 100%;
+  display: flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #e0e0e0;
+  margin: 0;
+}
+/* main */
+main {
+  height: 100%;
+  margin: 20px;
+  margin-top: 70px;
+  width: auto;
+}
+
+/* header */
+
+header {
+  background-color: #333;
+  width: 100%;
+  z-index: 3;
+  position: fixed;
+}
+
+header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: #333;
+}
+a {
+  color: white;
+}
+header li a {
+  display: block;
+  padding: 20px 20px;
+  text-decoration: none;
+}
+header input {
+  display: block;
+  padding: 20px 20px;
+  text-decoration: none;
+  list-style-type: none;
+  color: white;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+header li a:hover,
+header li input:hover,
+header .menu-btn:hover {
+  color: #007bff;
+}
+
+header .logo {
+  display: block;
+  float: left;
+  font-size: 2em;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+/* Header menu */
+
+header .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height 0.2s ease-out;
+}
+
+/* menu icon */
+
+header .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 28px 20px;
+  position: relative;
+  user-select: none;
+}
+
+header .menu-icon .navicon {
+  background: white;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background 0.2s ease-out;
+  width: 18px;
+}
+
+header .menu-icon .navicon:before,
+header .menu-icon .navicon:after {
+  background: white;
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all 0.2s ease-out;
+  width: 100%;
+}
+
+header .menu-icon .navicon:before {
+  top: 5px;
+}
+
+header .menu-icon .navicon:after {
+  top: -5px;
+}
+
+/* Header menu btn */
+
+header .menu-btn {
+  display: none;
+}
+
+header .menu-btn:checked ~ .menu {
+  max-height: 240px;
+}
+
+header .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+header .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+header .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+@media (min-width: 48em) {
+  header li {
+    float: left;
+  }
+  header li a {
+    padding: 20px 30px;
+  }
+  header .menu {
+    clear: none;
+    float: left;
+    max-height: none;
+  }
+  header .menu-icon {
+    display: none;
+  }
+}
+/* Source: https://codepen.io/mutedblues/pen/MmPNPG */
+
+/*Fouter*/
+footer {
+  text-align: center;
+}
+.footer-line {
+  height: 1px; /* Adjust the height of the line as needed */
+  width: 50px; /* Adjust the width of the line as needed */
+  background-color: #333; /* Adjust the line color */
+  margin: 0 auto; /* Center the line horizontally */
+  margin-bottom: 10px; /* Add spacing between the line and the spans */
+}
+
+/*Main*/
+#nomstyle {
+  font-size: 20px;
+  color: #142d60;
+  text-align: center;
+  align-items: center;
+}
+
+/*Body page login (Connexion)*/
+.login-container {
+  width: 300px;
+  margin: 100px auto;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.login-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #777;
+}
+
+.input-group input {
+  width: 90%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background: #333;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+#erreur {
+  padding-top: 5%;
+  color: rgb(248, 0, 0);
+}
+
+/* Body page blogs */
+
+/* Apply basic styling to the blog container */
+.blog-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  position: relative;
+  height: 100%;
+}
+/* Style for the blog */
+.blog {
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  position: relative;
+}
+
+/* Style for the blog title */
+.blog-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+  overflow-wrap: break-word;
+}
+
+/* Style for the blog date */
+.blog-date {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+/* Style for the blog content */
+.blog-content {
+  font-size: 16px;
+  line-height: 1.6;
+  overflow-wrap: break-word;
+}
+
+/* Style for the blog buttons */
+.blog-buttons {
+  display: flex;
+  justify-content: flex-start; /* Align buttons to the left */
+  align-items: center;
+  margin-top: 10px;
+  margin-left: 60%;
+}
+
+/* Style for the delete and edit buttons */
+.delete-button,
+.edit-button {
+  background-color: #ff5733; /* Delete button color */
+  color: #ffffff;
+  border: none;
+  padding: 3px 8px; /* Adjusted padding to make buttons smaller */
+  margin-right: 5px; /* Added margin between buttons */
+  cursor: pointer;
+  font-size: 12px; /* Adjust font size */
+  border-radius: 3px; /* Rounded corners */
+}
+
+.edit-button {
+  background-color: #3498db; /* Edit button color */
+}
+
+/* Style for the add blog page */
+.add-blog-container {
+  max-width: 600px; /* Reduce max-width for wider screens */
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #000;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for the form */
+.add-blog-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.add-blog-form label {
+  font-weight: bold;
+}
+
+.add-blog-form input[type="text"],
+.add-blog-form textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box; /* This ensures padding is included in width calculation */
+}
+
+.add-blog-form textarea {
+  resize: vertical; /* Allow vertical resizing of the textarea */
+}
+
+.add-blog-form button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+/* style for the dropdown button*/
+.dropdown {
+  display: inline-block;
+  margin: 5px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.dropdown-btn {
+  background-color: #3498db;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown-content li {
+  padding: 10px;
+}
+
+.dropdown-content a {
+  text-decoration: none;
+  color: black;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}

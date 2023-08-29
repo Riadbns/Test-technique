@@ -1,0 +1,18 @@
+<header class="header">
+  <a href="" class="logo">CS Viamonde</a>
+  {{#if user}}
+  <input class="menu-btn" type="checkbox" id="menu-btn" />
+  <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+  <ul class="menu">
+    
+    <li><a href="/blogs">Blogues</a></li>
+    <li><a href="/Addblog">Nouvel Article</a>
+    </li>
+    <li>
+      <form method="post" action="/deconnexion">
+        <input type="submit" value="Deconnexion">
+      </form>
+    </li>
+    {{/if}}
+  </ul>
+</header>

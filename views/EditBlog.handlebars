@@ -1,0 +1,19 @@
+<div class="add-blog-container">
+  {{#each blog}}
+    <h2>Modifier un blogue</h2>
+    <form class="add-blog-form" id="update-blog-form" data-id="{{this.id}}">
+      <label for="title">Titre : </label>
+      <input type="text" id="title" name="title" value="{{this.nom}}" />
+
+      <label for="content">Contenu de blogue:</label>
+      <textarea
+        id="content"
+        name="content"
+        rows="4"
+      >{{this.description}}</textarea>
+
+      <button type="submit">Sauvegarder</button>
+      <div id="erreur"></div>
+    </form>
+  {{/each}}
+</div>
